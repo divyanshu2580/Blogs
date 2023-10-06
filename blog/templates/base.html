@@ -1,0 +1,23 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Django Project</title>
+
+        {% comment %} <link href='https://fonts.google.com/specimen/Young+Serif' rel='stylesheet'> 
+         {% endcomment %}
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "css/base.css" %}">
+    </head>
+    <body>
+        <header>
+            <h1><a href='{% url "home" %}'> Django Blog </a></h1>
+        </header>
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
+
+
